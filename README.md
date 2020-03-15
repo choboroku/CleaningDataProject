@@ -35,7 +35,7 @@ https://www.elen.ucl.ac.be/Proceedings/esann/esannpdf/es2013-84.pdf
 
 3. Uses descriptive activity names to name the activities in the data set
 
-4. Appropriately labels the data set with descriptive variable names.
+4. Label the data set with descriptive variable names.
 
 5. From the data set in step 4, creates a second, independent tidy data set with
 the average of each variable for each activity and each subject.
@@ -60,64 +60,6 @@ the average of each variable for each activity and each subject.
 
 8. 'test/y_test.txt': Test labels.
 
-
-# Original Variables and Features Selection
-
-The original source contains a **README.txt** file with some additional details
-regarding to this dataset. From the description in **features_info.txt**, there are 17 variables:
-
-1. tBodyAcc-XYZ       
-2. tGravityAcc-XYZ    
-3. tBodyAccJerk-XYZ   
-4. tBodyGyro-XYZ      
-5. tBodyGyroJerk-XYZ  
-6. tBodyAccMag
-7. tGravityAccMag     
-8. tBodyAccJerkMag    
-9. tBodyGyroMag       
-10. tBodyGyroJerkMag   
-11. fBodyAcc-XYZ       
-12. fBodyAccJerk-XYZ   
-13. fBodyGyro-XYZ      
-14. fBodyAccMag        
-15. fBodyAccJerkMag    
-16. fBodyGyroMag       
-17. fBodyGyroJerkMag  
-
-Each variable has its own mean and standard deviation (std). Variables with XYZ
-tag have 3 means and 3 std. 1 mean and 1 std for each coordinate X, Y, and Z,
-respectively. So, the number of pairs (mean, std) for each variable is as follows:
-
-3 tBodyAcc-XYZ      
-3 tGravityAcc-XYZ   
-3 tBodyAccJerk-XYZ  
-3 tBodyGyro-XYZ     
-3 tBodyGyroJerk-XYZ 
-1 tBodyAccMag       
-1 tGravityAccMag    
-1 tBodyAccJerkMag   
-1 tBodyGyroMag      
-1 tBodyGyroJerkMag  
-3 fBodyAcc-XYZ      
-3 fBodyAccJerk-XYZ  
-3 fBodyGyro-XYZ     
-1 fBodyAccMag       
-1 fBodyAccJerkMag   
-1 fBodyGyroMag      
-1 fBodyGyroJerkMag  
-
-That makes 24 (3\*8) pairs of means and std for variables with -XYZ tags, and 9 (1\*9) pairs of means and stds for variables
-for the remaining variables.  This makes a total of 33 (24+9) means and 33 stds. This can be easily verified using these
-R commands:
-
-```
-# Read the labels:
-labels<-read.table("features.txt")
-
-# look at the labels
-length(grep("mean[()]", labels$V2)) #  33
-length(grep("std()", labels$V2))    #  33
-```
 
 # Following the Assignment Steps:
 
@@ -277,7 +219,7 @@ and activity:
 [61] "average-FrequencyBodyAccelerometerMagnitude.mean"    
 [62] "average-FrequencyBodyAccelerometerMagnitude.std"     
 [63] "average-FrequencyBodyAccelerometerJerkMagnitude.mean"
-[64] "average-FrequencyBodyAccelerometerJerkMagnitude.std" 
+[64] "average-FrequencyBodyAccelerometerJerkMagnitude.std"
 [65] "average-FrequencyBodyGyroscopeMagnitude.mean"        
 [66] "average-FrequencyBodyGyroscopeMagnitude.std"         
 [67] "average-FrequencyBodyGyroscopeJerkMagnitude.mean"    

@@ -49,10 +49,26 @@ respectively. So, the number of pairs (mean, std) for each variable is as follow
 
 That makes 24 (3\*8) pairs of means and std for variables with -XYZ tags, and 9 (1\*9) pairs of means and stds for variables
 for the remaining variables.  This makes a total of 33 (24+9) means and 33 stds. In this dataset, 30 volunteers participated
-in the study. Each volunteer performed activities (6 in total) described in the file """activity_labels.txt""". 
-Each pair (subject, activity) contains several records. 
+in the study. Each volunteer performed activities (6 in total: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS,
+SITTING, STANDING, LAYING)) described in the file """activity_labels.txt""".  Each pair (subject, activity) contains
+several records, where each record reports a value for the variables above. The dataset is divided into two
+categories : test and train. The test set contains 30% of the volunteers
+while the trainign sets has 70% of the volunteers.
 
 Running the script run_analysis.R, a dataset that contains the mean and standard deviation of the variables defined above is 
 generated. Using that dataset,  the script generates a tidy dataset called ***tidy.mean.only.txt***.  That dataset
 contains the averages of the means and the standard deviations of the variables in the original dataset, for each
 each pair of (subject, activity). 
+
+The steps of the script are as follows:
+
+1. Generate a dataset based on the training and the test sets.
+
+2. From the dataset in 1., obtain only the measurements that are mean and standard
+deviation for each measurement.
+
+3. From the assignment, rename the activity names in a more descriptive way. 
+
+4. Using that dataset above, generate a second dataset with the average of each variable
+for each subject and each activity.
+
