@@ -25,7 +25,8 @@ regarding to this dataset. From the description in **features_info.txt**, there 
 Please refer to the **features_info.txt** file to get more additional information about
 how these variables were computed.
 
-Each variable above has its own mean and standard deviation (std). Variables with XYZ
+Each variable above has its own mean and standard deviation (std). The units of the
+variables are expressed in time (start with t) and frequency (begin with f) Variables with XYZ
 tag have 3 means and 3 std. 1 mean and 1 std for each coordinate X, Y, and Z,
 respectively. So, the number of pairs (mean, std) for each variable is as follows:
 
@@ -58,7 +59,7 @@ while the trainign sets has 70% of the volunteers.
 Running the script run_analysis.R, a dataset that contains the mean and standard deviation of the variables defined above is 
 generated. Using that dataset,  the script generates a tidy dataset called ***tidy.mean.only.txt***.  That dataset
 contains the averages of the means and the standard deviations of the variables in the original dataset, for each
-each pair of (subject, activity). 
+pair of (subject, activity). 
 
 The steps of the script are as follows:
 
